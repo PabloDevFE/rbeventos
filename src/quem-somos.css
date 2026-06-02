@@ -1,0 +1,408 @@
+/* ==========================================================================
+   1. PÁGINA "QUEM SOMOS" - SEÇÃO HERO & MISSÃO
+   ========================================================================== */
+.about-hero {
+  position: relative;
+  height: 400px;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+}
+
+.about-hero-content {
+  position: relative;
+  z-index: 3;
+  color: var(--text-light);
+  max-width: 700px;
+}
+
+.about-badge {
+  display: inline-block;
+  background-color: var(--accent-color);
+  color: var(--text-light);
+  padding: 6px 14px;
+  font-weight: 700;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  box-shadow: var(--shadow-sm);
+}
+
+.about-title {
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 15px;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.6);
+}
+
+.about-subtitle {
+  font-size: clamp(1rem, 2.5vw, 1.2rem);
+  opacity: 0.95;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.6);
+}
+
+.about-details-section {
+  padding: 80px 0;
+  background-color: var(--bg-white);
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.sub-title {
+  font-size: clamp(1.8rem, 4vw, 2.4rem);
+  font-weight: 800;
+  margin-bottom: 25px;
+  color: var(--primary-color);
+}
+
+.sub-title span {
+  color: var(--accent-color);
+}
+
+.about-paragraph {
+  font-size: 1.05rem;
+  color: var(--text-muted);
+  margin-bottom: 20px;
+  line-height: 1.7;
+}
+
+.highlight-text {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--primary-color);
+}
+
+.about-img-block {
+  width: 100%;
+}
+
+.featured-about-img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: var(--shadow-md);
+  object-fit: cover;
+}
+
+/* ==========================================================================
+   2. PÁGINA "QUEM SOMOS" - SEÇÃO DO FUNDADOR (RODRIGO BELLES)
+   ========================================================================== */
+.founder-section {
+  padding: 110px 0 !important;
+  background-color: var(--bg-light) !important;
+}
+
+.founder-section .container {
+  padding: 0 40px !important;
+  box-sizing: border-box !important;
+}
+
+.founder-grid {
+  display: grid !important;
+  grid-template-columns: 0.9fr 1.1fr !important;
+  gap: 60px !important;
+  align-items: center !important;
+  width: 100% !important;
+}
+
+.founder-img-wrapper {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  width: 100% !important;
+}
+
+.founder-img-card {
+  background-color: var(--bg-white);
+  padding: 16px !important;
+  border-radius: 8px !important;
+  box-shadow: var(--shadow-md);
+  width: 100% !important;
+  max-width: 380px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  box-sizing: border-box !important;
+  position: relative !important;
+}
+
+.founder-img {
+  width: 100% !important;
+  height: auto !important;
+  aspect-ratio: 1 / 1 !important;
+  object-fit: cover !important;
+  border-radius: 6px !important;
+  display: block !important;
+  position: static !important;
+  transform: none !important;
+  margin: 0 0 16px 0 !important;
+}
+
+.founder-caption {
+  text-align: center !important;
+  width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.founder-caption h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin-bottom: 4px;
+}
+
+.founder-caption span {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.founder-info {
+  display: flex !important;
+  flex-direction: column !important;
+}
+
+.section-tag {
+  display: inline-block;
+  color: var(--accent-color);
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+
+.text-center {
+  text-align: center;
+  display: block;
+}
+
+/* ==========================================================================
+   3. PÁGINA "QUEM SOMOS" - EVENTOS JÁ PRODUZIDOS (PORTFÓLIO)
+   ========================================================================== */
+.past-events-section {
+  padding: 80px 0 !important;
+  background-color: var(--bg-light) !important;
+  border-top: 1px solid rgba(0, 0, 0, 0.05) !important;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05) !important;
+  width: 100% !important;
+}
+
+.past-events-header {
+  margin-bottom: 50px !important;
+  text-align: center !important;
+}
+
+.section-description {
+  max-width: 650px !important;
+  margin: 15px auto 0 !important;
+  color: var(--text-muted) !important;
+  font-size: 1.05rem !important;
+  line-height: 1.6 !important;
+}
+
+.past-events-grid {
+  display: grid !important;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)) !important;
+  gap: 30px !important;
+  width: 100% !important;
+}
+
+.past-event-card {
+  background-color: var(--bg-white) !important;
+  border-radius: 8px !important;
+  overflow: hidden !important;
+  box-shadow: var(--shadow-sm) !important;
+  display: flex !important;
+  flex-direction: column !important;
+  transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+}
+
+.past-event-card:hover {
+  transform: translateY(-5px) !important;
+  box-shadow: var(--shadow-md) !important;
+}
+
+.past-card-img-box {
+  position: relative !important;
+  height: 200px !important;
+  overflow: hidden !important;
+  width: 100% !important;
+}
+
+.past-card-img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  display: block !important;
+  transition: transform 0.4s ease !important;
+}
+
+.past-event-card:hover .past-card-img {
+  transform: scale(1.05) !important;
+}
+
+.past-card-stat {
+  position: absolute !important;
+  bottom: 15px !important;
+  right: 15px !important;
+  background-color: var(--primary-color) !important;
+  color: var(--text-light) !important;
+  padding: 5px 12px !important;
+  border-radius: 4px !important;
+  font-size: 0.8rem !important;
+  font-weight: 700 !important;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.15) !important;
+  z-index: 5 !important;
+}
+
+.past-card-body {
+  padding: 24px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  flex-grow: 1 !important;
+}
+
+.past-card-tag {
+  font-size: 0.75rem !important;
+  font-weight: 700 !important;
+  color: var(--accent-color) !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.5px !important;
+  margin-bottom: 8px !important;
+  display: block !important;
+}
+
+.past-card-title {
+  font-size: 1.2rem !important;
+  font-weight: 700 !important;
+  color: var(--text-dark) !important;
+  margin-bottom: 12px !important;
+  line-height: 1.3 !important;
+}
+
+.past-card-text {
+  font-size: 0.9rem !important;
+  color: var(--text-muted) !important;
+  line-height: 1.6 !important;
+  margin-bottom: 20px !important;
+}
+
+.past-card-footer {
+  margin-top: auto !important;
+  display: flex !important;
+  justify-content: space-between !important;
+  border-top: 1px solid rgba(0, 0, 0, 0.05) !important;
+  padding-top: 15px !important;
+  font-size: 0.8rem !important;
+  font-weight: 600 !important;
+  color: var(--text-muted) !important;
+}
+
+/* ==========================================================================
+   4. PÁGINA "QUEM SOMOS" - DEPOIMENTOS
+   ========================================================================== */
+.testimonials-section {
+  padding: 80px 0 100px;
+  background-color: var(--bg-white);
+}
+
+.testimonials-header {
+  margin-bottom: 50px;
+}
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.testimonial-card {
+  background-color: var(--bg-light);
+  padding: 40px 30px;
+  border-radius: 8px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.quote-icon {
+  font-size: 4rem;
+  color: rgba(4, 6, 107, 0.08);
+  font-family: Georgia, serif;
+  position: absolute;
+  top: 10px;
+  left: 20px;
+  line-height: 1;
+}
+
+.testimonial-text {
+  font-size: 0.95rem;
+  color: var(--text-dark);
+  font-style: italic;
+  line-height: 1.6;
+  margin-bottom: 25px;
+  position: relative;
+  z-index: 2;
+}
+
+.testimonial-author {
+  margin-top: auto;
+  border-top: 1px solid rgba(0,0,0,0.06);
+  padding-top: 15px;
+}
+
+.author-name {
+  display: block;
+  font-weight: 700;
+  color: var(--primary-color);
+  font-size: 1rem;
+}
+
+.author-role {
+  display: block;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+/* ==========================================================================
+   5. RESPONSIVIDADE (PÁGINA QUEM SOMOS)
+   ========================================================================== */
+@media (max-width: 900px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  
+  .about-img-block {
+    order: -1;
+  }
+
+  .founder-grid {
+    grid-template-columns: 1fr !important;
+    gap: 30px !important;
+  }
+
+  .founder-img-wrapper {
+    order: -1 !important;
+  }
+  
+  .founder-section {
+    padding: 70px 0 !important;
+  }
+  
+  .founder-section .container {
+    padding: 0 20px !important;
+  }
+}

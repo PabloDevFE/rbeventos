@@ -1,0 +1,266 @@
+/* ==========================================================================
+   1. SEÇÃO DE CONTATO PRINCIPAL
+   ========================================================================== */
+.contact-section {
+  padding: 80px 0 100px;
+  background-color: var(--bg-light);
+}
+
+.contact-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.contact-tag {
+  display: inline-block;
+  color: var(--accent-color);
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+
+.contact-title {
+  font-size: clamp(2rem, 5vw, 2.8rem);
+  font-weight: 800;
+  color: var(--primary-color);
+  margin-bottom: 15px;
+}
+
+.contact-title span {
+  color: var(--accent-color);
+}
+
+.contact-subtitle {
+  max-width: 600px;
+  margin: 0 auto;
+  color: var(--text-muted);
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+/* ==========================================================================
+   2. GRADE DE CONTATO (CONTACT GRID)
+   ========================================================================== */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 40px;
+  align-items: stretch;
+}
+
+/* ==========================================================================
+   3. ESTILOS DO FORMULÁRIO (LADO ESQUERDO)
+   ========================================================================== */
+.contact-form-wrapper {
+  background-color: var(--bg-white);
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: var(--shadow-sm);
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-group-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-group label {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Inputs elegantes e sem bordas excessivas */
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1px solid #dcdfe3;
+  border-radius: 4px;
+  font-family: var(--font-family);
+  font-size: 0.95rem;
+  color: var(--text-dark);
+  background-color: #fcfdfe;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  box-sizing: border-box;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: #a0aec0;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--accent-color);
+  box-shadow: 0 0 0 3px rgba(255, 74, 0, 0.15);
+  background-color: var(--bg-white);
+}
+
+.form-submit-btn {
+  align-self: flex-start;
+  padding: 14px 30px;
+  font-size: 0.9rem;
+  box-shadow: 0 4px 10px rgba(255, 74, 0, 0.2);
+}
+
+/* ==========================================================================
+   4. CANAIS DE ATENDIMENTO (LADO DIREITO)
+   ========================================================================== */
+.contact-info-wrapper {
+  display: flex;
+}
+
+.contact-info-card {
+  background-color: var(--bg-white);
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: var(--shadow-sm);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.info-card-title {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--primary-color);
+  margin-bottom: 15px;
+  line-height: 1.2;
+}
+
+.info-card-title span {
+  color: var(--accent-color);
+}
+
+.info-card-intro {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 35px;
+}
+
+.info-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.info-item-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 18px;
+  background-color: var(--bg-light);
+  border-radius: 6px;
+  border: 1px solid transparent;
+  transition: transform 0.2s, border-color 0.2s, box-shadow 0.2s;
+}
+
+.info-item-link:hover .info-item {
+  transform: translateY(-2px);
+  border-color: rgba(255, 74, 0, 0.3);
+  box-shadow: var(--shadow-sm);
+}
+
+.info-icon {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background-color: rgba(4, 6, 107, 0.08);
+  color: var(--primary-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.info-item-link:hover .info-icon {
+  background-color: var(--accent-color);
+  color: var(--text-light);
+}
+
+.info-text {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.info-label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  letter-spacing: 0.5px;
+}
+
+.info-value {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  word-break: break-all; /* Protege contra quebras em telas muito pequenas */
+}
+
+/* ==========================================================================
+   5. REGRAS DE RESPONSIVIDADE (MEDIA QUERIES)
+   ========================================================================== */
+@media (max-width: 900px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  
+  .form-submit-btn {
+    width: 100%; /* Botão largo no mobile para melhorar usabilidade touch */
+    align-self: stretch;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-section {
+    padding: 60px 0;
+  }
+  
+  .contact-form-wrapper,
+  .contact-info-card {
+    padding: 24px;
+  }
+  
+  .form-group-row {
+    grid-template-columns: 1fr; /* Inputs um embaixo do outro no celular */
+    gap: 20px;
+  }
+  
+  .info-item {
+    padding: 15px;
+    gap: 15px;
+  }
+  
+  .info-icon {
+    width: 40px;
+    height: 40px;
+  }
+}
