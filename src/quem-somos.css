@@ -377,6 +377,64 @@
 }
 
 /* ==========================================================================
+   SEÇÃO DE CLIENTES E PARCEIROS (LOGO GRIDS)
+   ========================================================================== */
+.partners-section {
+  padding: 80px 0 100px;
+  background-color: var(--bg-white);
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.partners-block {
+  margin-bottom: 70px;
+}
+
+.partners-block:last-child {
+  margin-bottom: 0;
+}
+
+.partners-block .sub-title {
+  margin-bottom: 40px;
+}
+
+/* Flexbox dinâmico que centraliza de forma fluida números ímpares de logos */
+.logos-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 30px 60px; /* Espaço vertical de 30px, horizontal de 60px */
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.logo-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 180px;
+  height: 90px;
+  padding: 5px;
+}
+
+.partner-logo {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain; /* Garante que os logos não fiquem esticados ou amassados */
+  
+  /* Efeito elegante que acende as cores do logo somente ao passar o mouse */
+  filter: grayscale(100%) opacity(60%);
+  transition: filter 0.3s ease, transform 0.3s ease;
+}
+
+/* Acende as cores e aumenta levemente o logo no hover */
+.logo-wrapper:hover .partner-logo {
+  filter: grayscale(0%) opacity(100%);
+  transform: scale(1.05);
+}
+
+
+/* ==========================================================================
    5. RESPONSIVIDADE (PÁGINA QUEM SOMOS)
    ========================================================================== */
 @media (max-width: 900px) {
@@ -404,5 +462,36 @@
   
   .founder-section .container {
     padding: 0 20px !important;
+  }
+}
+
+/* Ajustes de responsividade específicos para os logotipos */
+@media (max-width: 768px) {
+  .partners-section {
+    padding: 60px 0;
+  }
+  
+  .partners-block {
+    margin-bottom: 50px;
+  }
+  
+  .logos-container {
+    gap: 20px 30px;
+  }
+  
+  .logo-wrapper {
+    width: 140px;
+    height: 70px;
+  }
+}
+
+@media (max-width: 480px) {
+  .logos-container {
+    gap: 15px 20px;
+  }
+  
+  .logo-wrapper {
+    width: 110px;
+    height: 60px;
   }
 }
