@@ -185,12 +185,12 @@ body {
 .main-footer {
   background-color: var(--primary-color);
   color: var(--text-light);
-  padding: 60px 0 20px;
+  padding: 60px 0 0;
 }
 
 .footer-content {
   display: grid;
-  grid-template-columns: 2fr 1fr;
+  grid-template-columns: 1.5fr 1fr 1.25fr;
   gap: 40px;
   margin-bottom: 40px;
 }
@@ -232,12 +232,81 @@ body {
   color: var(--text-light);
 }
 
+.footer-contact h4 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.footer-contact-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer-contact-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: rgba(255,255,255,0.7);
+  text-decoration: none;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.footer-contact-link:hover {
+  color: var(--text-light);
+  transform: translateX(3px);
+}
+
+.footer-contact-icon {
+  width: 36px;
+  height: 36px;
+  flex: 0 0 36px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(255,255,255,0.08);
+  color: var(--text-light);
+}
+
+.footer-contact-icon svg {
+  width: 18px;
+  height: 18px;
+}
+
+.footer-contact-text {
+  font-size: 0.9rem;
+  font-weight: 600;
+  word-break: break-word;
+}
+
 .footer-bottom {
   border-top: 1px solid rgba(255, 255, 255, 0.1);
   padding-top: 20px;
+  padding-bottom: 20px;
   text-align: center;
   font-size: 0.85rem;
   color: rgba(255,255,255,0.5);
+}
+
+.footer-credit {
+  padding: 12px 20px;
+  text-align: center;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: rgba(255,255,255,0.6);
+  background-color: rgba(0,0,0,0.12);
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.footer-credit:hover {
+  background-color: #ffd200;
+  color: var(--text-dark);
+}
+
+.footer-credit strong {
+  color: inherit;
 }
 
 /* ==========================================================================
@@ -292,5 +361,31 @@ body {
   .footer-content {
     grid-template-columns: 1fr;
     gap: 30px;
+  }
+
+  .footer-contact h4 {
+    display: none;
+  }
+
+  .footer-contact-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .footer-contact-link {
+    width: 44px;
+    height: 44px;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: rgba(255,255,255,0.08);
+  }
+
+  .footer-contact-icon {
+    background-color: transparent;
+  }
+
+  .footer-contact-text {
+    display: none;
   }
 }
