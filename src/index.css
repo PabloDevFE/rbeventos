@@ -141,6 +141,37 @@
 .carousel-control.prev { left: 20px; }
 .carousel-control.next { right: 20px; }
 
+.carousel-indicators {
+  position: absolute;
+  left: 50%;
+  bottom: 22px;
+  display: flex;
+  gap: 10px;
+  transform: translateX(-50%);
+  z-index: 10;
+}
+
+.carousel-indicator {
+  width: 11px;
+  height: 11px;
+  padding: 0;
+  border: 2px solid rgba(255, 255, 255, 0.9);
+  border-radius: 50%;
+  background-color: transparent;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.carousel-indicator.active {
+  background-color: var(--accent-color);
+  border-color: var(--accent-color);
+  transform: scale(1.18);
+}
+
+.hero-carousel {
+  touch-action: pan-y;
+}
+
 /* ==========================================================================
    2. SEÇÃO DE EVENTOS & FILTROS (PÁGINA INICIAL)
    ========================================================================== */
@@ -302,13 +333,12 @@
   }
 
   .carousel-control {
-    width: 36px;
-    height: 36px;
-    font-size: 1rem;
+    display: none;
   }
 
-  .carousel-control.prev { left: 10px; }
-  .carousel-control.next { right: 10px; }
+  .carousel-indicators {
+    bottom: 10px;
+  }
 
   .slide-container {
     padding: 0 25px;
