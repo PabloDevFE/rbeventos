@@ -1,255 +1,376 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Circuito Sete Lagoas de Corrida | RB Eventos</title>
-    <!-- MANTIVE SEUS CAMINHOS ORIGINAIS -->
-    <link rel="stylesheet" href="../../assets/styles/events/circuito-sete-lagoas.css">
-    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-</head>
-<body>
 
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="../../assets/icons/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="../../assets/icons/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="../../assets/icons/favicon-16x16.png" />
+    <link rel="icon" href="../../assets/icons/favicon.ico" sizes="any" />
+    <link rel="icon" type="image/png" sizes="192x192" href="../../assets/icons/android-chrome-192x192.png" />
+    <link rel="icon" type="image/png" sizes="512x512" href="../../assets/icons/android-chrome-512x512.png" />
+    <link rel="shortcut icon" href="../../assets/icons/favicon.ico" type="image/x-icon" />
+    <link rel="manifest" href="../../assets/icons/site.webmanifest" />
+
+    <!-- MANTIVE SEUS CAMINHOS ORIGINAIS -->
+    <link
+      rel="stylesheet"
+      href="../../assets/styles/events/circuito-sete-lagoas.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
     <!-- NAVBAR -->
     <nav class="navbar" id="navbar">
-        <div class="container nav-container">
-            <a href="../../index.html" class="logo-link">
-                ../../
-            </a>
-            
-            <div class="nav-menu">
-                <a href="#modalidades" class="nav-link">Modalidades</a>
-                <a href="#premiacao" class="nav-link">Premiações</a>
-                <a href="#retirada" class="nav-link">Kit</a>
-                <a href="#local" class="nav-link">Local</a>
-            </div>
-            
-            <a href="https://www.sympla.com.br/evento/1-circuito-de-corrida-de-rua-de-sete-lagoas/3286269" class="btn-custom btn-nav" target="_blank">
-                INSCREVA-SE
-            </a>
+      <div class="container nav-container">
+        <a href="../../index.html" class="logo-link"><img src="../../assets/images/branding/logo-extend-bran.svg" alt="Logo RB" style="width: 130px;"></a>
 
-            <!-- Menu Mobile Toggle -->
-            <button class="mobile-toggle" id="mobile-toggle">
-                <i class="fa-solid fa-bars"></i>
-            </button>
+        <div class="nav-menu">
+          <a href="#modalidades" class="nav-link">Modalidades</a>
+          <a href="#premiacao" class="nav-link">Premiações</a>
+          <a href="#retirada" class="nav-link">Kit</a>
+          <a href="#local" class="nav-link">Local</a>
         </div>
+
+        <a
+          href="https://www.sympla.com.br/evento/1-circuito-de-corrida-de-rua-de-sete-lagoas/3286269"
+          class="btn-custom btn-nav"
+          target="_blank"
+        >
+          INSCREVA-SE
+        </a>
+
+        <!-- Menu Mobile Toggle -->
+        <button class="mobile-toggle" id="mobile-toggle">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
     </nav>
 
     <!-- HERO SECTION -->
     <header class="hero">
-        <div class="container hero-container">
-            <div class="hero-content reveal">
-                <div class="hero-badge">26 DE JULHO DE 2026</div>
-                <h1 class="hero-title">
-                    CIRCUITO <br>
-                    <span class="text-lime">SETE LAGOAS</span> <br>
-                    DE CORRIDA
-                </h1>
-                <p class="hero-subtitle">CONDOMÍNIO JARDIM DA SERRA | ETAPA 1</p>
-                
-                <div class="hero-stats">
-                    <div class="stat-item">
-                        <i class="fa-solid fa-clock stat-icon"></i>
-                        <div>
-                            <span class="stat-val">08:00H</span>
-                            <span class="stat-label">LARGADA</span>
-                        </div>
-                    </div>
-                    <div class="stat-divider"></div>
-                    <div class="stat-item">
-                        <i class="fa-solid fa-person-running stat-icon"></i>
-                        <div>
-                            <span class="stat-val">5K e 10K</span>
-                            <span class="stat-label">CORRIDA</span>
-                        </div>
-                    </div>
-                    <div class="stat-divider"></div>
-                    <div class="stat-item">
-                        <i class="fa-solid fa-person-walking stat-icon"></i>
-                        <div>
-                            <span class="stat-val">2K</span>
-                            <span class="stat-label">CAMINHADA</span>
-                        </div>
-                    </div>
-                    <div class="stat-divider"></div>
-                    <div class="stat-item">
-                        <i class="fa-solid fa-person-walking stat-icon"></i>
-                        <div>
-                            <span class="stat-val">CORRIDA</span>
-                            <span class="stat-label">KIDS</span>
-                        </div>
-                    </div>
-                </div>
+      <div class="container hero-container">
+        <div class="hero-content reveal">
+          <div class="hero-badge">26 DE JULHO DE 2026</div>
+          <h1 class="hero-title">
+            CIRCUITO <br />
+            <span class="text-lime">SETE LAGOAS</span> <br />
+            DE CORRIDA
+          </h1>
+          <p class="hero-subtitle">CONDOMÍNIO JARDIM DA SERRA | ETAPA 1</p>
+
+          <div class="hero-stats">
+            <div class="stat-item">
+              <span class="stat-icon"><i class="fa-solid fa-clock"></i></span>
+              <div>
+                <span class="stat-val">08:00H</span>
+                <span class="stat-label">LARGADA</span>
+              </div>
             </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+              <span class="stat-icon"><i class="fa-solid fa-person-running"></i></span>
+              <div>
+                <span class="stat-val">5K e 10K</span>
+                <span class="stat-label">CORRIDA</span>
+              </div>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+              <span class="stat-icon"><i class="fa-solid fa-person-walking"></i></span>
+              <div>
+                <span class="stat-val">2K</span>
+                <span class="stat-label">CAMINHADA</span>
+              </div>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+              <span class="stat-icon"><i class="fa-solid fa-child"></i></span>
+              <div>
+                <span class="stat-val">CORRIDA</span>
+                <span class="stat-label">KIDS</span>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="hero-bg-graphic"></div>
+      </div>
+      <div class="hero-bg-graphic"></div>
     </header>
 
     <!-- MODALIDADES -->
     <section id="modalidades" class="section">
-        <div class="container">
-            <div class="section-header reveal">
-                <h2 class="section-title">ESCOLHA SEU <span class="text-navy">DESAFIO</span></h2>
-                <p class="section-desc">Quatro categorias pensadas para todos os níveis de atletas.</p>
-            </div>
-            
-            <div class="grid-cards">
-                <div class="card reveal">
-                    <div class="card-number">10K</div>
-                    <h3>CORRIDA 10KM</h3>
-                    <p>Competição de alta performance dentro do condomínio.</p>
-                </div>
-                <div class="card reveal" style="transition-delay: 100ms;">
-                    <div class="card-number">5K</div>
-                    <h3>CORRIDA 5KM</h3>
-                    <p>Ideal para corredores iniciantes e intermediários.</p>
-                </div>
-                <div class="card reveal" style="transition-delay: 200ms;">
-                    <div class="card-number">2K</div>
-                    <h3>CAMINHADA 2KM</h3>
-                    <p>Percurso focado em saúde, bem-estar e integração.</p>
-                </div>
-                <div class="card reveal" style="transition-delay: 300ms;">
-                    <div class="card-number"><i class="fa-solid fa-child"></i></div>
-                    <h3>CORRIDA KIDS</h3>
-                    <p>Baterias especiais separadas por idade para os pequenos.</p>
-                </div>
-            </div>
+      <div class="container">
+        <div class="section-header reveal">
+          <h2 class="section-title">
+            ESCOLHA SEU <span class="text-navy">DESAFIO</span>
+          </h2>
+          <p class="section-desc">
+            Quatro categorias pensadas para todos os níveis de atletas.
+          </p>
         </div>
+
+        <div class="grid-cards">
+          <div class="card reveal">
+            <div class="card-number">10K</div>
+            <h3>CORRIDA 10KM</h3>
+            <p>Competição de alta performance dentro do condomínio.</p>
+          </div>
+          <div class="card reveal" style="transition-delay: 100ms">
+            <div class="card-number">5K</div>
+            <h3>CORRIDA 5KM</h3>
+            <p>Ideal para corredores iniciantes e intermediários.</p>
+          </div>
+          <div class="card reveal" style="transition-delay: 200ms">
+            <div class="card-number">2K</div>
+            <h3>CAMINHADA 2KM</h3>
+            <p>Percurso focado em saúde, bem-estar e integração.</p>
+          </div>
+          <div class="card reveal" style="transition-delay: 300ms">
+            <div class="card-number"><i class="fa-solid fa-child"></i></div>
+            <h3>CORRIDA KIDS</h3>
+            <p>Baterias especiais separadas por idade para os pequenos.</p>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- PREMIAÇÕES -->
     <section id="premiacao" class="section bg-light">
-        <div class="container split-layout">
-            <div class="split-image reveal">
-                <div class="image-wrapper">
-                    <img src="eventos-img/trofeu.jpeg" alt="Troféu Circuito Sete Lagoas" onerror="this.src='https://placehold.co/600x600/04066b/CCFF00?text=Troféu+2026'">
-                </div>
-            </div>
-            <div class="split-content reveal">
-                <div class="tag">PREMIAÇÃO 2026</div>
-                <h2 class="section-title">RECONHECIMENTO DOS <span class="text-navy">CAMPEÕES</span></h2>
-                <p>Os três primeiros colocados de cada categoria, no masculino e feminino, recebem troféu exclusivo da Etapa 1. Todo participante que cruzar a linha de chegada ganha medalha de participação.</p>
-                
-                <ul class="feature-list">
-                    <li><i class="fa-solid fa-trophy text-lime-bg"></i> <strong>Top 3:</strong> Por categoria na corrida.</li>
-                    <li><i class="fa-solid fa-venus-mars text-lime-bg"></i> <strong>Masculino e Feminino:</strong> Nos percursos de 5K e 10K.</li>
-                    <li><i class="fa-solid fa-medal text-lime-bg"></i> <strong>Medalha Finisher:</strong> Para todos os inscritos.</li>
-                </ul>
-
-                <div class="age-categories">
-                    <h4>Faixas Etárias (5K e 10K)</h4>
-                    <div class="pills">
-                        <span class="pill">18-25</span>
-                        <span class="pill">25-35</span>
-                        <span class="pill">35-45</span>
-                        <span class="pill">45-55</span>
-                        <span class="pill">55+</span>
-                    </div>
-                </div>
-            </div>
+      <div class="container split-layout">
+        <div class="split-image reveal">
+          <div class="image-wrapper">
+            <img
+              src="eventos-img/trofeu.jpeg"
+              alt="Troféu Circuito Sete Lagoas"
+              onerror="
+                this.src =
+                  'https://placehold.co/600x600/04066b/CCFF00?text=Troféu+2026'
+              "
+            />
+          </div>
         </div>
+        <div class="split-content reveal">
+          <div class="tag">PREMIAÇÃO 2026</div>
+          <h2 class="section-title">
+            RECONHECIMENTO DOS <span class="text-navy">CAMPEÕES</span>
+          </h2>
+          <p>
+            Os três primeiros colocados de cada categoria, no masculino e
+            feminino, recebem troféu exclusivo da Etapa 1. Todo participante que
+            cruzar a linha de chegada ganha medalha de participação.
+          </p>
+
+          <ul class="feature-list">
+            <li>
+              <i class="fa-solid fa-trophy text-lime-bg"></i>
+              <strong>Top 3:</strong> Por categoria na corrida.
+            </li>
+            <li>
+              <i class="fa-solid fa-venus-mars text-lime-bg"></i>
+              <strong>Masculino e Feminino:</strong> Nos percursos de 5K e 10K.
+            </li>
+            <li>
+              <i class="fa-solid fa-medal text-lime-bg"></i>
+              <strong>Medalha Finisher:</strong> Para todos os inscritos.
+            </li>
+          </ul>
+
+          <div class="age-categories">
+            <h4>Faixas Etárias (5K e 10K)</h4>
+            <div class="pills">
+              <span class="pill">18-25</span>
+              <span class="pill">25-35</span>
+              <span class="pill">35-45</span>
+              <span class="pill">45-55</span>
+              <span class="pill">55+</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MANDALA DO EVENTO -->
+    <section id="mandala" class="section mandala-section">
+      <div class="container mandala-layout">
+        <div class="mandala-content reveal">
+          <div class="tag">Mandala do Evento</div>
+          <h2 class="section-title">
+            ADQUIRA A <span class="text-navy">MANDALA</span>
+          </h2>
+          <p>
+            A mandala especial do Circuito Sete Lagoas é um item exclusivo para
+            guardar a lembrança da Etapa 1. Para adquirir a sua, entre em
+            contato diretamente com o Júlio pelo WhatsApp.
+          </p>
+          <div class="mandala-contact">
+            <a
+              href="https://wa.me/5531997117601?text=Ol%C3%A1%2C%20J%C3%BAlio%21%20Tenho%20interesse%20em%20adquirir%20a%20mandala%20do%20Circuito%20Sete%20Lagoas."
+              class="btn-custom"
+              target="_blank"
+            >
+              <i class="fa-brands fa-whatsapp"></i>
+              FALAR COM JÚLIO
+            </a>
+            <span>31 99711-7601</span>
+          </div>
+        </div>
+
+        <div class="mandala-gallery reveal">
+          <figure class="mandala-card">
+            <img
+              src="eventos-img/mandala/mandala-completa.jpg"
+              alt="Mandala do Circuito Sete Lagoas - modelo 1"
+            />
+          </figure>
+          <figure class="mandala-card">
+            <img
+              src="eventos-img/mandala/mandala-vazia.jpg"
+              alt="Mandala do Circuito Sete Lagoas - modelo 2"
+            />
+          </figure>
+          <figure class="mandala-card">
+            <img
+              src="eventos-img/mandala/medalhas.jpg"
+              alt="Mandala do Circuito Sete Lagoas - modelo 3"
+            />
+          </figure>
+        </div>
+      </div>
     </section>
 
     <!-- RETIRADA DE KITS -->
     <section id="retirada" class="section">
-        <div class="container split-layout reverse">
-            <div class="split-image reveal">
-                <div class="image-wrapper box-navy">
-                    <img src="eventos-img/kit.png" alt="Kit do Atleta" onerror="this.src='https://placehold.co/600x600/04066b/CCFF00?text=Kit+Atleta'">
-                </div>
-            </div>
-            <div class="split-content reveal">
-                <div class="tag">KIT EXCLUSIVO</div>
-                <h2 class="section-title">TUDO O QUE VOCÊ <span class="text-navy">PRECISA</span></h2>
-                <p>O kit do atleta foi pensado para oferecer conforto e performance. As datas e horários de retirada serão divulgados pela organização próximo ao evento.</p>
-                
-                <div class="kit-items">
-                    <div class="kit-item">
-                        <i class="fa-solid fa-shirt"></i>
-                        <span>Camiseta Especial Sete Lagoas 2026</span>
-                    </div>
-                    <div class="kit-item">
-                        <i class="fa-solid fa-bag-shopping"></i>
-                        <span>Sacochila Esportiva</span>
-                    </div>
-                    <div class="kit-item">
-                        <i class="fa-solid fa-id-card"></i>
-                        <span>Placa Número de Peito & Chip</span>
-                    </div>
-                    <div class="kit-item">
-                        <i class="fa-solid fa-apple-whole"></i>
-                        <span>Suplementos (Mentos e Nature Be)</span>
-                    </div>
-                </div>
-            </div>
+      <div class="container split-layout reverse">
+        <div class="split-image reveal">
+          <div class="image-wrapper box-navy">
+            <img
+              src="eventos-img/kit.png"
+              alt="Kit do Atleta"
+              onerror="
+                this.src =
+                  'https://placehold.co/600x600/04066b/CCFF00?text=Kit+Atleta'
+              "
+            />
+          </div>
         </div>
+        <div class="split-content reveal">
+          <div class="tag">KIT EXCLUSIVO</div>
+          <h2 class="section-title">
+            TUDO O QUE VOCÊ <span class="text-navy">PRECISA</span>
+          </h2>
+          <p>
+            O kit do atleta foi pensado para oferecer conforto e performance. As
+            datas e horários de retirada serão divulgados pela organização
+            próximo ao evento.
+          </p>
+
+          <div class="kit-items">
+            <div class="kit-item">
+              <i class="fa-solid fa-shirt"></i>
+              <span>Camiseta Especial Sete Lagoas 2026</span>
+            </div>
+            <div class="kit-item">
+              <i class="fa-solid fa-bag-shopping"></i>
+              <span>Sacochila Esportiva</span>
+            </div>
+            <div class="kit-item">
+              <i class="fa-solid fa-id-card"></i>
+              <span>Placa Número de Peito & Chip</span>
+            </div>
+            <div class="kit-item">
+              <i class="fa-solid fa-apple-whole"></i>
+              <span>Suplementos (Mentos e Nature Be)</span>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- LOCALIZAÇÃO -->
     <section id="local" class="section bg-light">
-        <div class="container">
-            <div class="section-header reveal">
-                <h2 class="section-title">LOCAL E <span class="text-navy">CIRCUITO</span></h2>
-            </div>
-
-            <div class="local-grid">
-                <div class="local-info reveal">
-                    <div class="info-card">
-                        <i class="fa-solid fa-calendar-day"></i>
-                        <div>
-                            <h4>Data</h4>
-                            <p>26 de Julho de 2026</p>
-                        </div>
-                    </div>
-                    <div class="info-card">
-                        <i class="fa-solid fa-clock"></i>
-                        <div>
-                            <h4>Horário</h4>
-                            <p>Largada às 08:00h</p>
-                        </div>
-                    </div>
-                    <div class="info-card">
-                        <i class="fa-solid fa-location-dot"></i>
-                        <div>
-                            <h4>Localização</h4>
-                            <p>Condomínio Jardim da Serra<br>Sete Lagoas - MG</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="local-map reveal" style="transition-delay: 200ms;">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15060.052824558503!2d-44.2504289!3d-19.4334335!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xab14cb751b3127%3A0xb69720df38c538a7!2sCondom%C3%ADnio%20Jardim%20da%20Serra!5e0!3m2!1spt-BR!2sbr!4v1700000000000!5m2!1spt-BR!2sbr" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                </div>
-            </div>
+      <div class="container">
+        <div class="section-header reveal">
+          <h2 class="section-title">
+            LOCAL E <span class="text-navy">CIRCUITO</span>
+          </h2>
         </div>
+
+        <div class="local-grid">
+          <div class="local-info reveal">
+            <div class="info-card">
+              <i class="fa-solid fa-calendar-day"></i>
+              <div>
+                <h4>Data</h4>
+                <p>26 de Julho de 2026</p>
+              </div>
+            </div>
+            <div class="info-card">
+              <i class="fa-solid fa-clock"></i>
+              <div>
+                <h4>Horário</h4>
+                <p>Largada às 08:00h</p>
+              </div>
+            </div>
+            <div class="info-card">
+              <i class="fa-solid fa-location-dot"></i>
+              <div>
+                <h4>Localização</h4>
+                <p>Condomínio Jardim da Serra<br />Sete Lagoas - MG</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="local-map reveal" style="transition-delay: 200ms">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15060.052824558503!2d-44.2504289!3d-19.4334335!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xab14cb751b3127%3A0xb69720df38c538a7!2sCondom%C3%ADnio%20Jardim%20da%20Serra!5e0!3m2!1spt-BR!2sbr!4v1700000000000!5m2!1spt-BR!2sbr"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- CTA FINAL -->
     <section class="section cta-section">
-        <div class="container">
-            <div class="cta-box reveal">
-                <h2>PREPARADO PARA A LARGADA?</h2>
-                <p>Garanta sua vaga hoje mesmo no Sympla. Vagas limitadas por lote.</p>
-                <a href="https://www.sympla.com.br/evento/1-circuito-de-corrida-de-rua-de-sete-lagoas/3286269" target="_blank" class="btn-custom btn-large">
-                    IR PARA A INSCRIÇÃO <i class="fa-solid fa-arrow-right"></i>
-                </a>
-            </div>
+      <div class="container">
+        <div class="cta-box reveal">
+          <h2>PREPARADO PARA A LARGADA?</h2>
+          <p>
+            Garanta sua vaga hoje mesmo no Sympla. Vagas limitadas por lote.
+          </p>
+          <a
+            href="https://www.sympla.com.br/evento/1-circuito-de-corrida-de-rua-de-sete-lagoas/3286269"
+            target="_blank"
+            class="btn-custom btn-large"
+          >
+            IR PARA A INSCRIÇÃO <i class="fa-solid fa-arrow-right"></i>
+          </a>
         </div>
+      </div>
     </section>
 
     <!-- FOOTER -->
     <footer class="footer">
-        <div class="container footer-content">
-            <div class="footer-logo">
-                <span class="logo-text">RB <strong>EVENTOS</strong></span>
-            </div>
-            <p>&copy; 2026 RB Eventos Esportivos. Todos os direitos reservados.</p>
+      <div class="container footer-content">
+        <div class="footer-logo">
+          <a href="../../index.html" class="logo-link"><img src="../../assets/images/branding/logo-extend-bran.svg" alt="Logo RB" style="width: 130px;"></a>
         </div>
+        <p>&copy; 2026 RB Eventos Esportivos. Todos os direitos reservados.</p>
+      </div>
     </footer>
 
     <!-- MANTIVE SEU CAMINHO ORIGINAL -->
     <script src="../../assets/scripts/events/circuito-sete-lagoas.js"></script>
-</body>
+  </body>
 </html>
