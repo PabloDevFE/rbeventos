@@ -160,8 +160,23 @@ if (prevBtn && nextBtn && slides.length) {
 // ==========================================
 // FILTRO DE EVENTOS (Estilo TBH Esportes)
 // ==========================================
-const filterTabs = document.querySelectorAll('.filter-tab');
-const eventCards = document.querySelectorAll('.event-card');
+const eventsSection = document.getElementById('eventos');
+const filterTabs = eventsSection ? eventsSection.querySelectorAll('.filter-tab') : [];
+const eventCards = eventsSection ? eventsSection.querySelectorAll('.event-card') : [];
+
+function updateEventGroupVisibility() {
+  if (!eventsSection) return;
+
+  eventsSection.querySelectorAll('.event-month-group').forEach(group => {
+    const hasVisibleCard = Array.from(group.querySelectorAll('.event-card')).some(card => card.style.display !== 'none');
+    group.style.display = hasVisibleCard ? 'block' : 'none';
+  });
+
+  eventsSection.querySelectorAll('.event-year-group').forEach(group => {
+    const hasVisibleCard = Array.from(group.querySelectorAll('.event-card')).some(card => card.style.display !== 'none');
+    group.style.display = hasVisibleCard ? 'block' : 'none';
+  });
+}
 
 filterTabs.forEach(tab => {
   tab.addEventListener('click', () => {
@@ -175,17 +190,15 @@ filterTabs.forEach(tab => {
 
       if (filterValue === 'todos' || cardStatus === filterValue) {
         card.style.display = 'flex';
-        setTimeout(() => {
-          card.style.opacity = '1';
-          card.style.transform = 'translateY(0)';
-        }, 50);
+        card.style.opacity = '1';
+        card.style.transform = 'translateY(0)';
       } else {
         card.style.opacity = '0';
         card.style.transform = 'translateY(10px)';
-        setTimeout(() => {
-          card.style.display = 'none';
-        }, 200);
+        card.style.display = 'none';
       }
     });
+
+    updateEventGroupVisibility();
   });
 });

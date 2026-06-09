@@ -199,6 +199,28 @@
   color: var(--accent-color);
 }
 
+.event-year-group {
+  margin-top: 38px;
+}
+
+.event-year-title {
+  color: var(--primary-color);
+  font-size: 1.45rem;
+  font-weight: 800;
+  margin-bottom: 18px;
+}
+
+.event-month-group {
+  margin-bottom: 28px;
+}
+
+.event-month-title {
+  color: var(--text-dark);
+  font-size: 1.15rem;
+  font-weight: 800;
+  margin-bottom: 16px;
+}
+
 .filter-tabs {
   display: flex;
   gap: 10px;
@@ -314,6 +336,10 @@
   margin-top: auto;
 }
 
+.card-actions-single {
+  grid-template-columns: 1fr;
+}
+
 /* ==========================================================================
    3. RESPONSIVIDADE (PÁGINA INICIAL)
    ========================================================================== */
@@ -398,4 +424,5 @@
     grid-template-columns: 1fr;
     gap: 20px;
   }
+
 }

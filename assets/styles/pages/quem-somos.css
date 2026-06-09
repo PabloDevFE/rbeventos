@@ -80,6 +80,10 @@
   color: var(--primary-color);
 }
 
+.about-social-cta {
+  margin-top: 8px;
+}
+
 .about-img-block {
   width: 100%;
 }
@@ -514,4 +518,14 @@
     width: 110px;
     height: 60px;
   }
+}
+
+.past-events-gallery {
+  display: flex;
+  justify-content: center;
+  margin-top: 36px;
+}
+
+.past-events-gallery-cta {
+  min-width: 160px;
 }
