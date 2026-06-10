@@ -309,6 +309,16 @@ body {
   color: inherit;
 }
 
+.footer-credit a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.footer-credit a:hover,
+.footer-credit a:focus-visible {
+  text-decoration: underline;
+}
+
 /* ==========================================================================
    5. REGRAS DE RESPONSIVIDADE (GLOBAL)
    ========================================================================== */

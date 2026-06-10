@@ -121,6 +121,15 @@
   box-shadow: 0 4px 10px rgba(255, 74, 0, 0.2);
 }
 
+.form-submit-btn:disabled {
+  background-color: #9ca3af;
+  border-color: #9ca3af;
+  color: #ffffff;
+  box-shadow: none;
+  cursor: not-allowed;
+  opacity: 1;
+}
+
 /* ==========================================================================
    4. CANAIS DE ATENDIMENTO (LADO DIREITO)
    ========================================================================== */

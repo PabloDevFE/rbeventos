@@ -439,6 +439,7 @@
   width: 180px;
   height: 90px;
   padding: 5px;
+  text-decoration: none;
 }
 
 .partner-logo {
@@ -451,10 +452,18 @@
   transition: filter 0.3s ease, transform 0.3s ease;
 }
 
+.partner-logo-invert {
+  filter: invert(1) grayscale(100%) opacity(60%);
+}
+
 /* Acende as cores e aumenta levemente o logo no hover */
 .logo-wrapper:hover .partner-logo {
   filter: grayscale(0%) opacity(100%);
   transform: scale(1.05);
+}
+
+.logo-wrapper:hover .partner-logo-invert {
+  filter: invert(1) grayscale(100%) opacity(100%);
 }
 
 
@@ -528,4 +537,13 @@
 
 .past-events-gallery-cta {
   min-width: 160px;
+}
+
+.past-events-gallery-cta.is-disabled {
+  background-color: #9ca3af;
+  border-color: #9ca3af;
+  color: #ffffff;
+  box-shadow: none;
+  cursor: not-allowed;
+  pointer-events: none;
 }

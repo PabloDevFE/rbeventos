@@ -95,6 +95,24 @@ if (carousel && slides.length) {
     indicatorsWrapper.appendChild(indicator);
   });
 
+  slides.forEach(slide => {
+    const slideUrl = slide.getAttribute('data-href');
+    if (!slideUrl) return;
+
+    slide.addEventListener('click', (event) => {
+      if (event.defaultPrevented || event.target.closest('.slide-link-btn')) return;
+      window.location.href = slideUrl;
+    });
+
+    slide.addEventListener('keydown', (event) => {
+      if (event.key !== 'Enter' && event.key !== ' ') return;
+      if (event.target.closest('.slide-link-btn')) return;
+
+      event.preventDefault();
+      window.location.href = slideUrl;
+    });
+  });
+
   carousel.appendChild(indicatorsWrapper);
   updateIndicators();
 

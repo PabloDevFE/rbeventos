@@ -1,0 +1,39 @@
+CHECKLIST SEO - RB EVENTOS ESPORTIVOS
+Dominio final: https://rbeventosesportivos.com.br/
+
+1. Tags ja adicionadas no codigo
+- Todas as paginas publicas receberam title, meta description, robots, theme-color e link canonical.
+- Todas as paginas publicas receberam Open Graph e Twitter Card.
+- Foram adicionados dados estruturados JSON-LD para Organization, WebSite, ContactPage, AboutPage e SportsEvent.
+- Foram criados robots.txt e sitemap.xml na raiz do projeto.
+- O arquivo assets/icons/site.webmanifest foi preenchido com nome, tema, start_url e idioma.
+
+2. Paginas e canonicos configurados
+- Home: https://rbeventosesportivos.com.br/
+- Evento Circuito Sete Lagoas: https://rbeventosesportivos.com.br/pages/eventos/circuito-sete-lagoas.html
+- Quem Somos: https://rbeventosesportivos.com.br/pages/quem-somos.html
+- Fale Conosco: https://rbeventosesportivos.com.br/pages/fale-conosco.html
+
+4. Conferencias obrigatorias na hospedagem
+- Confirmar que https://rbeventosesportivos.com.br/ abre com HTTPS valido.
+- Confirmar que https://rbeventosesportivos.com.br/robots.txt abre publicamente.
+- Confirmar que https://rbeventosesportivos.com.br/sitemap.xml abre publicamente.
+- Enviar o sitemap no Google Search Console.
+- Testar cada URL no Google Rich Results Test: https://search.google.com/test/rich-results
+- Testar cards sociais em:
+  https://www.opengraph.xyz/
+  https://cards-dev.twitter.com/validator
+  https://developers.facebook.com/tools/debug/
+
+5. Pontos de conteudo que podem melhorar ranking
+- Criar uma pagina individual para cada evento encerrado importante, caso tenha fotos, resultados ou informacoes oficiais.
+- O formulario da pagina Fale Conosco esta temporariamente desativado; ativar somente quando houver endpoint real ou envio por WhatsApp/e-mail.
+- Adicionar endereco completo do evento quando confirmado, incluindo rua, numero, CEP e geolocalizacao no JSON-LD.
+- Comprimir imagens grandes em WebP/JPG otimizado antes do deploy final.
+
+6. Auditoria visual e tecnica final
+- Validar HTML em https://validator.w3.org/
+- Rodar Lighthouse em mobile e desktop.
+- Verificar se todos os links externos abrem em nova aba com rel="noopener noreferrer".
+- Conferir se todas as imagens importantes tem alt descritivo.
+- Conferir se nao existem links quebrados apos o deploy.
