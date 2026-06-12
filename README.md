@@ -9,10 +9,10 @@ Dominio de producao: `https://rbeventosesportivos.com.br/`
 - `index.html`: pagina inicial e ponto de entrada do site.
 - `pages/`: paginas internas institucionais.
 - `pages/eventos/`: landing pages individuais de eventos.
-- `pages/eventos/eventos-img/`: imagens especificas das paginas de eventos.
 - `assets/styles/`: estilos globais, por pagina e por evento.
 - `assets/scripts/`: scripts compartilhados e scripts especificos de eventos.
 - `assets/images/`: imagens separadas por contexto de uso.
+- `assets/images/events/`: imagens especificas de eventos ativos e encerrados.
 - `assets/images/seo/`: imagens de compartilhamento Open Graph.
 - `robots.txt`: regras de indexacao para buscadores.
 - `sitemap.xml`: mapa das paginas publicas do site.
@@ -66,7 +66,7 @@ Status aceitos pelos filtros:
 
 - Hero da home: usar imagem horizontal em `assets/images/home/`, idealmente `1920x800`.
 - Hero Quem Somos: usar imagem horizontal em `assets/images/about/`, idealmente `1920x700`.
-- Hero de evento: usar imagem horizontal grande em `pages/eventos/eventos-img/`, idealmente `1920x1080` ou `2560x1440` otimizada.
+- Hero de evento: usar imagem horizontal grande em `assets/images/events/<slug-do-evento>/`, idealmente `1920x1080` ou `2560x1440` otimizada.
 - OG compartilhamento: usar `1200x630`, JPG, ate cerca de 1 MB.
 - Sempre comprimir imagens grandes antes de publicar.
 
@@ -80,6 +80,7 @@ Status aceitos pelos filtros:
   - `pages/eventos/eventos-img/kit.png`
   - `pages/eventos/eventos-img/circuito-sete.jpeg`
   - `assets/images/events/past/betim/capa-card.png`
+  - `assets/images/events/biathlon-bv/hero.png`
   - `pages/eventos/eventos-img/trofeu.jpeg`
   - `assets/images/about/foto-rodrigobelles.jpeg`
 
