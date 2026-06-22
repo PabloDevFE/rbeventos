@@ -72,6 +72,7 @@
 
 .badge-aberto { background-color: #28a745; }
 .badge-breve { background-color: #ffc107; color: #111; }
+.badge-encerrado { background-color: #dc3545; }
 
 .slide-title {
   font-size: clamp(1.8rem, 4.5vw, 2.8rem);
