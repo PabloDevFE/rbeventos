@@ -181,6 +181,90 @@ if (prevBtn && nextBtn && slides.length) {
 const eventsSection = document.getElementById('eventos');
 const filterTabs = eventsSection ? eventsSection.querySelectorAll('.filter-tab') : [];
 const eventCards = eventsSection ? eventsSection.querySelectorAll('.event-card') : [];
+const eventGrids = eventsSection ? eventsSection.querySelectorAll('.events-grid') : [];
+const eventCarousels = [];
+
+function getVisibleCards(grid) {
+  return Array.from(grid.querySelectorAll('.event-card')).filter(card => card.style.display !== 'none');
+}
+
+function updateEventCarouselControls(carouselData) {
+  const { grid, controls, prevButton, nextButton } = carouselData;
+  const visibleCards = getVisibleCards(grid);
+  const hasOverflow = grid.scrollWidth > grid.clientWidth + 4;
+  const shouldShowControls = visibleCards.length > 1 && hasOverflow;
+
+  controls.classList.toggle('is-visible', shouldShowControls);
+
+  if (!shouldShowControls) {
+    prevButton.disabled = true;
+    nextButton.disabled = true;
+    return;
+  }
+
+  prevButton.disabled = grid.scrollLeft <= 2;
+  nextButton.disabled = grid.scrollLeft + grid.clientWidth >= grid.scrollWidth - 2;
+}
+
+function updateAllEventCarouselControls() {
+  eventCarousels.forEach(updateEventCarouselControls);
+}
+
+eventGrids.forEach((grid, index) => {
+  const controls = document.createElement('div');
+  controls.className = 'event-carousel-controls';
+  controls.setAttribute('aria-label', 'Navegacao dos eventos deste grupo');
+
+  const prevButton = document.createElement('button');
+  prevButton.type = 'button';
+  prevButton.className = 'event-carousel-btn';
+  prevButton.setAttribute('aria-label', 'Evento anterior');
+  prevButton.textContent = '‹';
+
+  const nextButton = document.createElement('button');
+  nextButton.type = 'button';
+  nextButton.className = 'event-carousel-btn';
+  nextButton.setAttribute('aria-label', 'Proximo evento');
+  nextButton.textContent = '›';
+
+  controls.append(prevButton, nextButton);
+
+  const monthTitle = grid.parentElement ? grid.parentElement.querySelector('.event-month-title') : null;
+
+  if (monthTitle) {
+    const header = document.createElement('div');
+    header.className = 'event-carousel-header';
+    monthTitle.parentNode.insertBefore(header, monthTitle);
+    header.append(monthTitle, controls);
+  } else {
+    const header = document.createElement('div');
+    header.className = 'event-carousel-header event-carousel-header-alone';
+    header.append(controls);
+    grid.parentNode.insertBefore(header, grid);
+  }
+
+  const carouselData = { grid, controls, prevButton, nextButton };
+  eventCarousels.push(carouselData);
+
+  function scrollGrid(direction) {
+    const visibleCards = getVisibleCards(grid);
+    const firstCard = visibleCards[0];
+    const cardWidth = firstCard ? firstCard.getBoundingClientRect().width : 320;
+    const gap = Number.parseFloat(window.getComputedStyle(grid).columnGap || window.getComputedStyle(grid).gap || '24') || 24;
+
+    grid.scrollBy({
+      left: direction * (cardWidth + gap),
+      behavior: 'smooth'
+    });
+  }
+
+  prevButton.addEventListener('click', () => scrollGrid(-1));
+  nextButton.addEventListener('click', () => scrollGrid(1));
+  grid.addEventListener('scroll', () => updateEventCarouselControls(carouselData), { passive: true });
+
+  window.addEventListener('resize', updateAllEventCarouselControls);
+  updateEventCarouselControls(carouselData);
+});
 
 function updateEventGroupVisibility() {
   if (!eventsSection) return;
@@ -209,14 +293,18 @@ filterTabs.forEach(tab => {
       if (filterValue === 'todos' || cardStatus === filterValue) {
         card.style.display = 'flex';
         card.style.opacity = '1';
-        card.style.transform = 'translateY(0)';
       } else {
         card.style.opacity = '0';
-        card.style.transform = 'translateY(10px)';
         card.style.display = 'none';
       }
     });
 
     updateEventGroupVisibility();
+    eventGrids.forEach(grid => {
+      grid.scrollLeft = 0;
+    });
+    window.requestAnimationFrame(updateAllEventCarouselControls);
   });
 });
+
+window.requestAnimationFrame(updateAllEventCarouselControls);
