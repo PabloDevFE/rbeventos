@@ -330,6 +330,11 @@ img {
     linear-gradient(180deg, rgba(242, 248, 251, 0.9), rgba(255, 255, 255, 0.96));
 }
 
+.waters-section {
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(230, 247, 252, 0.92));
+}
+
 .intro-layout,
 .kit-layout,
 .location-layout {

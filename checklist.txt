@@ -10,6 +10,7 @@ Dominio final: https://rbeventosesportivos.com.br/
 
 2. Paginas e canonicos configurados
 - Home: https://rbeventosesportivos.com.br/
+- Evento Desafio Force: https://rbeventosesportivos.com.br/pages/eventos/desafio-force.html
 - Evento Circuito Sete Lagoas: https://rbeventosesportivos.com.br/pages/eventos/circuito-sete-lagoas.html
 - Quem Somos: https://rbeventosesportivos.com.br/pages/quem-somos.html
 - Fale Conosco: https://rbeventosesportivos.com.br/pages/fale-conosco.html
