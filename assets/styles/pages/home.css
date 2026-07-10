@@ -97,7 +97,6 @@
 .badge-aberto { background-color: #28a745; }
 .badge-breve { background-color: #ffc107; color: #111; }
 .badge-encerrado { background-color: #dc3545; }
-.badge-fechado { background-color: #174f91; }
 
 .slide-title {
   font-size: clamp(1.8rem, 4.5vw, 2.8rem);
@@ -383,43 +382,6 @@
   transition: transform 0.4s ease;
 }
 
-.card-img-emtel {
-  object-fit: contain;
-  background-color: #164f91;
-}
-
-.event-card-emtel {
-  position: relative;
-}
-
-.event-card-emtel::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  z-index: 1;
-  pointer-events: none;
-  border-top: 4px solid #ff1744;
-  opacity: 0.9;
-}
-
-.event-card-emtel::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: -45%;
-  z-index: 2;
-  width: 32%;
-  pointer-events: none;
-  background: linear-gradient(105deg, transparent, rgba(255, 255, 255, 0.24), transparent);
-  transform: skewX(-18deg);
-  transition: left 0.55s ease;
-}
-
-.event-card-emtel:hover::after {
-  left: 112%;
-}
-
 .event-card:hover .card-img {
   transform: scale(1.06);
 }
@@ -439,7 +401,6 @@
 .status-aberto { background-color: #28a745; }
 .status-breve { background-color: #ffc107; color: #111; }
 .status-encerrado { background-color: #dc3545; }
-.status-fechado { background-color: #174f91; }
 
 .card-body {
   padding: 20px;
@@ -594,7 +555,4 @@
     animation: none;
   }
 
-  .event-card-emtel::after {
-    display: none;
-  }
 }
