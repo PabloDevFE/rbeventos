@@ -211,6 +211,13 @@ function updateAllEventCarouselControls() {
 }
 
 eventGrids.forEach((grid, index) => {
+  const monthGroup = grid.closest('.event-month-group');
+  const monthTitle = monthGroup ? monthGroup.querySelector('.event-month-title') : null;
+
+  if (!monthTitle) {
+    return;
+  }
+
   const controls = document.createElement('div');
   controls.className = 'event-carousel-controls';
   controls.setAttribute('aria-label', 'Navegacao dos eventos deste grupo');
@@ -229,19 +236,10 @@ eventGrids.forEach((grid, index) => {
 
   controls.append(prevButton, nextButton);
 
-  const monthTitle = grid.parentElement ? grid.parentElement.querySelector('.event-month-title') : null;
-
-  if (monthTitle) {
-    const header = document.createElement('div');
-    header.className = 'event-carousel-header';
-    monthTitle.parentNode.insertBefore(header, monthTitle);
-    header.append(monthTitle, controls);
-  } else {
-    const header = document.createElement('div');
-    header.className = 'event-carousel-header event-carousel-header-alone';
-    header.append(controls);
-    grid.parentNode.insertBefore(header, grid);
-  }
+  const header = document.createElement('div');
+  header.className = 'event-carousel-header';
+  monthTitle.parentNode.insertBefore(header, monthTitle);
+  header.append(monthTitle, controls);
 
   const carouselData = { grid, controls, prevButton, nextButton };
   eventCarousels.push(carouselData);

@@ -5,12 +5,17 @@ document.addEventListener('DOMContentLoaded', () => {
     const navMenu = document.querySelector('.nav-menu');
 
     if(mobileToggle && navMenu) {
+        mobileToggle.setAttribute('aria-expanded', 'false');
+
         mobileToggle.addEventListener('click', () => {
             navMenu.classList.toggle('active');
+            const isOpen = navMenu.classList.contains('active');
+            mobileToggle.setAttribute('aria-expanded', String(isOpen));
+            mobileToggle.setAttribute('aria-label', isOpen ? 'Fechar menu' : 'Abrir menu');
             
             // Troca o ícone do menu
             const icon = mobileToggle.querySelector('i');
-            if(navMenu.classList.contains('active')) {
+            if(isOpen) {
                 icon.classList.remove('fa-bars');
                 icon.classList.add('fa-xmark');
             } else {
@@ -26,6 +31,8 @@ document.addEventListener('DOMContentLoaded', () => {
         link.addEventListener('click', () => {
             if(navMenu.classList.contains('active')) {
                 navMenu.classList.remove('active');
+                mobileToggle.setAttribute('aria-expanded', 'false');
+                mobileToggle.setAttribute('aria-label', 'Abrir menu');
                 const icon = mobileToggle.querySelector('i');
                 icon.classList.remove('fa-xmark');
                 icon.classList.add('fa-bars');
