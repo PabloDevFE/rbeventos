@@ -411,8 +411,7 @@
 }
 
 .event-mini-banner strong,
-.event-mini-banner span,
-.mini-banner-copy {
+.event-mini-banner span {
   position: relative;
   z-index: 2;
 }
@@ -471,70 +470,6 @@
 .mini-banner-circuito .mini-banner-kicker,
 .mini-banner-circuito .mini-banner-edition {
   color: #ccff00;
-}
-
-.mini-banner-biathlon {
-  background:
-    radial-gradient(circle at 82% 18%, rgba(204, 255, 0, 0.28), transparent 25%),
-    linear-gradient(135deg, #04066b 0%, #071ea4 58%, #008acb 100%);
-  gap: 22px;
-  padding: 24px;
-  text-align: left;
-}
-
-.mini-banner-biathlon::before {
-  border: 1px solid rgba(255, 255, 255, 0.16);
-  border-radius: 50%;
-  height: 250px;
-  left: -122px;
-  top: -94px;
-  width: 250px;
-}
-
-.mini-banner-biathlon::after {
-  background: repeating-linear-gradient(
-    -45deg,
-    rgba(255, 255, 255, 0.1) 0 2px,
-    transparent 2px 13px
-  );
-  height: 100%;
-  inset: 0 0 0 auto;
-  opacity: 0.55;
-  width: 38%;
-}
-
-.mini-banner-mark {
-  align-items: center;
-  background: #ccff00;
-  border-radius: 50%;
-  color: #04066b;
-  display: flex;
-  flex: 0 0 68px;
-  font-size: 1.35rem;
-  font-weight: 900;
-  height: 68px;
-  justify-content: center;
-}
-
-.mini-banner-copy {
-  display: flex;
-  flex-direction: column;
-  gap: 7px;
-}
-
-.mini-banner-biathlon strong {
-  color: #fff;
-  font-size: 1.55rem;
-  line-height: 1;
-}
-
-.mini-banner-biathlon .mini-banner-kicker,
-.mini-banner-biathlon .mini-banner-edition {
-  color: #ccff00;
-}
-
-.mini-banner-biathlon .mini-banner-edition {
-  align-self: flex-start;
 }
 
 .card-status-pill {
