@@ -77,7 +77,7 @@ Status aceitos pelos filtros:
 - Conferidos JSON-LD das paginas publicas.
 - Conferidos links externos com `target="_blank"` e `rel="noopener noreferrer"`.
 - Conferidos arquivos de imagem usados nas paginas.
-- Desafio Force atualizado como duas provas diferentes: Biathlon e Aguas Abertas, com inscricoes pela Sympla.
+- Desafio Force atualizado como evento encerrado, com mensagem de agradecimento e link para as fotos oficiais.
 - Circuito Sete Lagoas atualizado como evento encerrado, com retrospectiva, galeria, video do YouTube e links oficiais para compra de fotos.
 - Eventos em breve usam mini banners provisórios feitos somente em HTML e CSS.
 - Identificadas imagens grandes que devem ser otimizadas depois:
