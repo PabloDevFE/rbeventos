@@ -23,7 +23,8 @@ Dominio de producao: `https://rbeventosesportivos.com.br/`
 - Paginas publicas com `title`, `meta description`, canonical, Open Graph, Twitter Cards e JSON-LD.
 - Imagens OG configuradas:
   - `assets/images/seo/og-base.jpg` para Home, Quem Somos e Fale Conosco.
-  - `assets/images/events/desafio-force/hero.jpg` para Desafio Force.
+  - `assets/images/events/circuito-force/banner.png` para Circuito Force.
+  - `assets/images/events/desafio-force/logo.png` para Desafio Force.
   - `assets/images/events/circuito-sete-lagoas/gallery/07-podio-equipe.jpeg` para Circuito Sete Lagoas.
 - `robots.txt` aponta para `https://rbeventosesportivos.com.br/sitemap.xml`.
 - Formulario da pagina Fale Conosco esta desativado ate existir envio real.
@@ -78,6 +79,7 @@ Status aceitos pelos filtros:
 - Conferidos links externos com `target="_blank"` e `rel="noopener noreferrer"`.
 - Conferidos arquivos de imagem usados nas paginas.
 - Desafio Force atualizado como evento encerrado, com mensagem de agradecimento e link para as fotos oficiais.
+- Circuito Force de Biathlon e Aguas Abertas adicionado com inscricoes pela Sympla, distancias e premiacao.
 - Circuito Sete Lagoas atualizado como evento encerrado, com retrospectiva, galeria, video do YouTube e links oficiais para compra de fotos.
 - Eventos em breve usam mini banners provisórios feitos somente em HTML e CSS.
 - Identificadas imagens grandes que devem ser otimizadas depois:
