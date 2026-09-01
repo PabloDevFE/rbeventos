@@ -1,0 +1,7 @@
+Contatos preparados para importação no Hostinger
+Total de participantes na planilha: 192
+Contatos válidos e únicos: 159
+Linhas sem e-mail válido: 8
+Registros repetidos removidos: 25
+Lote 1: 80 contatos
+Lote 2: 79 contatos
