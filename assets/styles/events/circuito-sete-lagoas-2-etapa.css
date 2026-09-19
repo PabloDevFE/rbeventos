@@ -53,6 +53,15 @@ em{color:var(--red);font-style:normal}
 .race-grid span{color:var(--red);font-family:var(--garet);font-size:.75rem;font-weight:900}
 .race-grid h3{font-size:clamp(1.48rem,2.1vw,2.05rem);margin-top:68px}
 .race-grid p{font-size:.77rem;font-weight:700;margin-top:10px}
+.kids-section{background:var(--yellow);padding-block:clamp(64px,8vw,100px)}
+.kids-layout{align-items:center;display:grid;gap:clamp(38px,7vw,100px);grid-template-columns:1fr 1fr}
+.kids-section .eyebrow{color:var(--blue-deep)}
+.kids-heading p{font-size:1.05rem;margin-top:21px;max-width:430px}
+.kids-details{border-left:2px solid rgba(13,45,113,.24);padding-left:clamp(28px,5vw,56px)}
+.kids-stat{display:inline-flex;flex-direction:column;margin-right:clamp(28px,5vw,58px);vertical-align:top}
+.kids-stat strong{color:var(--red);font-family:var(--garet);font-size:clamp(2.15rem,4vw,3.6rem);letter-spacing:-.06em;line-height:.85}
+.kids-stat span{font-size:.67rem;font-weight:900;letter-spacing:.12em;margin-top:11px;text-transform:uppercase}
+.kids-details>p{font-size:.94rem;margin:27px 0 23px;max-width:480px}
 .schedule{background:var(--surface)}
 .schedule-heading p{color:#596a84;margin-top:22px;max-width:340px}
 .timeline{list-style:none}
@@ -78,12 +87,13 @@ footer{background:var(--blue-deep);color:#fff;padding:28px 0}
 footer>div{align-items:center;display:flex;justify-content:space-between;gap:20px}
 footer img{width:120px}
 footer p{color:rgba(255,255,255,.65);font-size:.7rem}
-@media(max-width:850px){.intro-grid,.schedule-grid,.awards-grid{grid-template-columns:1fr}
+@media(max-width:850px){.intro-grid,.schedule-grid,.awards-grid,.kids-layout{grid-template-columns:1fr}
 .hero-banner{box-shadow:12px 14px 0 var(--yellow)}
 .highlights-grid{grid-template-columns:1fr 1fr}
 .highlights article:last-child{border-top:1px solid rgba(13,45,113,.2);grid-column:span 2}
 .race-grid{grid-template-columns:1fr 1fr}
 .awards-copy{border-left:0;border-top:2px solid rgba(13,45,113,.25);padding:30px 0 0}
+.kids-details{border-left:0;border-top:2px solid rgba(13,45,113,.24);padding:30px 0 0}
 }
 @media(max-width:600px){.container{padding-inline:20px}
 .nav-links{display:none}
