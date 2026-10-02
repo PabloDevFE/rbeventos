@@ -82,9 +82,41 @@
   );
 }
 
+.carousel-slide.slide-outubro-rosa {
+  background-position: center;
+}
+
+.carousel-slide.slide-outubro-rosa::before {
+  background: linear-gradient(
+    90deg,
+    rgba(54, 0, 27, 0.96) 0%,
+    rgba(103, 0, 51, 0.88) 36%,
+    rgba(103, 0, 51, 0.22) 72%,
+    rgba(0, 0, 0, 0.04) 100%
+  );
+}
+
+.slide-outubro-rosa .slide-title {
+  color: #ff87bb;
+  font-size: clamp(2.6rem, 5.6vw, 4.8rem);
+  letter-spacing: -0.055em;
+}
+
+.slide-outubro-rosa .slide-link-btn {
+  background-color: #d90f68;
+}
+
 @media (max-width: 768px) {
   .carousel-slide.slide-circuito-force::before {
     background: rgba(0, 29, 73, 0.88);
+  }
+
+  .carousel-slide.slide-outubro-rosa {
+    background-position: 60% center;
+  }
+
+  .carousel-slide.slide-outubro-rosa::before {
+    background: rgba(73, 0, 37, 0.84);
   }
 }
 
