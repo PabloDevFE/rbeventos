@@ -98,8 +98,8 @@ Status aceitos pelos filtros:
 4. Rodar Lighthouse em mobile e desktop depois do deploy.
 5. Testar dados estruturados no Rich Results Test do Google.
 6. Testar compartilhamento no WhatsApp, Facebook Debugger e OpenGraph.xyz.
-7. Criar endpoint real para o formulario ou trocar por envio via WhatsApp/e-mail.
-8. Criar pagina de Politica de Privacidade antes de ativar analytics, pixels ou formularios reais.
+7. Confirmar o e-mail de ativacao enviado pelo FormSubmit no primeiro teste do formulario de contato.
+8. Criar uma pagina completa de Politica de Privacidade antes de ativar analytics ou pixels.
 9. Ativar o botao Galeria RB quando houver link oficial de fotos.
 10. Criar paginas individuais para eventos encerrados importantes com fotos, resultados e detalhes.
 11. Atualizar o JSON-LD dos eventos com endereco completo, CEP, geolocalizacao e lotes quando estiverem definidos.
