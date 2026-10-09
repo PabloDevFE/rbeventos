@@ -290,7 +290,111 @@
 }
 
 /* ==========================================================================
-   5. REGRAS DE RESPONSIVIDADE (MEDIA QUERIES)
+   5. CHAMADA PARA VOLUNTÁRIOS
+   ========================================================================== */
+.volunteer-cta {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 24px;
+  margin-top: 40px;
+  padding: 30px 34px;
+  overflow: hidden;
+  position: relative;
+  color: var(--text-light);
+  background: linear-gradient(120deg, var(--primary-color) 0%, #11178f 72%, #242bb8 100%);
+  border-radius: 8px;
+  box-shadow: var(--shadow-sm);
+}
+
+.volunteer-cta::after {
+  content: '';
+  position: absolute;
+  right: -55px;
+  bottom: -95px;
+  width: 210px;
+  height: 210px;
+  border: 26px solid rgba(255, 255, 255, 0.06);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.volunteer-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 62px;
+  height: 62px;
+  color: var(--accent-color);
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 50%;
+}
+
+.volunteer-content {
+  position: relative;
+  z-index: 1;
+}
+
+.volunteer-tag {
+  display: block;
+  margin-bottom: 6px;
+  color: var(--accent-color);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.volunteer-content h2 {
+  margin: 0 0 8px;
+  color: var(--text-light);
+  font-size: clamp(1.35rem, 3vw, 1.75rem);
+  line-height: 1.2;
+}
+
+.volunteer-content p {
+  max-width: 680px;
+  margin: 0;
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.volunteer-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: 48px;
+  padding: 12px 20px;
+  position: relative;
+  z-index: 1;
+  color: var(--text-light);
+  background-color: var(--accent-color);
+  border-radius: 4px;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.03em;
+  text-decoration: none;
+  text-transform: uppercase;
+  white-space: nowrap;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.volunteer-button:hover {
+  color: var(--text-light);
+  background-color: var(--accent-hover);
+  transform: translateY(-2px);
+}
+
+.volunteer-button:focus-visible {
+  outline: 3px solid rgba(255, 255, 255, 0.8);
+  outline-offset: 3px;
+}
+
+/* ==========================================================================
+   6. REGRAS DE RESPONSIVIDADE (MEDIA QUERIES)
    ========================================================================== */
 @media (max-width: 900px) {
   .contact-grid {
@@ -301,6 +405,15 @@
   .form-submit-btn {
     width: 100%; /* Botão largo no mobile para melhorar usabilidade touch */
     align-self: stretch;
+  }
+
+  .volunteer-cta {
+    grid-template-columns: auto minmax(0, 1fr);
+  }
+
+  .volunteer-button {
+    grid-column: 2;
+    justify-self: start;
   }
 }
 
@@ -327,5 +440,21 @@
   .info-icon {
     width: 40px;
     height: 40px;
+  }
+
+  .volunteer-cta {
+    grid-template-columns: 1fr;
+    gap: 18px;
+    padding: 26px 24px;
+  }
+
+  .volunteer-icon {
+    width: 52px;
+    height: 52px;
+  }
+
+  .volunteer-button {
+    grid-column: 1;
+    width: 100%;
   }
 }
