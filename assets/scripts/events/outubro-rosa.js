@@ -39,32 +39,6 @@ document.addEventListener('DOMContentLoaded', () => {
     revealElements.forEach(element => element.classList.add('active'));
   }
 
-  const eventDate = new Date('2026-10-24T07:30:00-03:00').getTime();
-  const days = document.getElementById('days');
-  const hours = document.getElementById('hours');
-  const minutes = document.getElementById('minutes');
-  const countdownNote = document.getElementById('countdown-note');
-
-  function updateCountdown() {
-    if (!days || !hours || !minutes || !countdownNote) return;
-    const distance = eventDate - Date.now();
-
-    if (distance <= 0) {
-      days.textContent = '00';
-      hours.textContent = '00';
-      minutes.textContent = '00';
-      countdownNote.textContent = 'O Outubro Rosa chegou. Bom evento!';
-      return;
-    }
-
-    days.textContent = String(Math.floor(distance / 86400000)).padStart(2, '0');
-    hours.textContent = String(Math.floor((distance % 86400000) / 3600000)).padStart(2, '0');
-    minutes.textContent = String(Math.floor((distance % 3600000) / 60000)).padStart(2, '0');
-  }
-
-  updateCountdown();
-  window.setInterval(updateCountdown, 60000);
-
   const currentYear = document.getElementById('current-year');
   if (currentYear) currentYear.textContent = new Date().getFullYear();
 });
