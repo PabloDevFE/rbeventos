@@ -92,8 +92,8 @@ button { font: inherit; }
 .purpose::after { content: "自他共栄"; position: absolute; right: -20px; bottom: -70px; color: rgba(241, 90, 34, 0.055); font-family: sans-serif; font-size: 13rem; font-weight: 900; white-space: nowrap; }
 .purpose-grid { position: relative; z-index: 1; display: grid; grid-template-columns: 0.92fr 1.08fr; gap: 110px; align-items: center; }
 .purpose-heading > img { width: 72px; margin-bottom: 32px; }
-.purpose h2, .section-heading h2, .schedule h2, .impact h2, .location h2, .final-cta h2 { margin-top: 18px; font-family: var(--display); font-size: clamp(3.6rem, 6.5vw, 6.2rem); font-style: italic; font-weight: 900; letter-spacing: -0.045em; line-height: 0.92; text-transform: uppercase; }
-.purpose h2 em, .section-heading h2 em, .schedule h2 em, .impact h2 em, .location h2 em, .final-cta h2 em { color: var(--orange); font-style: inherit; }
+.purpose h2, .section-heading h2, .shirt-copy h2, .schedule h2, .impact h2, .location h2, .final-cta h2 { margin-top: 18px; font-family: var(--display); font-size: clamp(3.6rem, 6.5vw, 6.2rem); font-style: italic; font-weight: 900; letter-spacing: -0.045em; line-height: 0.92; text-transform: uppercase; }
+.purpose h2 em, .section-heading h2 em, .shirt-copy h2 em, .schedule h2 em, .impact h2 em, .location h2 em, .final-cta h2 em { color: var(--orange); font-style: inherit; }
 .purpose-copy { padding-left: 34px; border-left: 1px solid var(--line); }
 .purpose-copy > p { margin-bottom: 22px; color: var(--muted); }
 .purpose-copy .lead { color: var(--ink); font-size: 1.16rem; font-weight: 600; }
@@ -122,6 +122,22 @@ button { font: inherit; }
 .route-detail span { border: 1px solid rgba(255, 255, 255, 0.2); padding: 7px 10px; font-size: 0.64rem; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; }
 .participation-note { position: relative; z-index: 1; max-width: 760px; margin: 34px auto 0; color: rgba(255, 255, 255, 0.58); font-size: 0.82rem; text-align: center; }
 .participation-note strong { color: var(--orange); }
+
+.event-shirt { isolation: isolate; background: #fff; }
+.event-shirt::before { content: ""; position: absolute; z-index: -1; top: 0; right: 0; bottom: 0; width: 38%; background: var(--orange); }
+.shirt-grid { display: grid; grid-template-columns: 0.72fr 1.28fr; gap: 88px; align-items: center; }
+.shirt-copy { position: relative; z-index: 2; }
+.shirt-copy > p { max-width: 470px; margin-top: 28px; color: var(--muted); }
+.shirt-details { display: grid; gap: 0; margin-top: 40px; border-top: 1px solid var(--line); }
+.shirt-details > div { display: grid; grid-template-columns: 44px 1fr; align-items: center; column-gap: 16px; padding: 18px 0; border-bottom: 1px solid var(--line); }
+.shirt-details span { grid-row: 1 / 3; color: var(--orange); font-family: var(--display); font-size: 1.35rem; font-weight: 900; }
+.shirt-details strong { font-family: var(--display); font-size: 1.1rem; font-weight: 800; letter-spacing: 0.03em; text-transform: uppercase; }
+.shirt-details small { color: var(--muted); font-size: 0.7rem; }
+.shirt-visual { position: relative; min-width: 0; padding: 70px 38px 30px; border: 1px solid rgba(23, 19, 16, 0.1); background: #fff; box-shadow: 0 34px 80px rgba(38, 19, 9, 0.17); }
+.shirt-visual::before { content: "自他共栄"; position: absolute; top: -40px; right: -28px; color: rgba(255, 255, 255, 0.24); font-family: sans-serif; font-size: 5.5rem; font-weight: 900; line-height: 1; white-space: nowrap; }
+.shirt-visual img { width: 100%; max-height: 610px; object-fit: contain; }
+.shirt-badge { position: absolute; top: 24px; left: 28px; color: var(--orange-dark); font-size: 0.64rem; font-weight: 800; letter-spacing: 0.14em; text-transform: uppercase; }
+.shirt-visual figcaption { margin-top: 18px; color: var(--muted); font-size: 0.7rem; text-align: center; }
 
 .schedule { background: #fff; }
 .schedule-grid { display: grid; grid-template-columns: 0.82fr 1.18fr; gap: 100px; align-items: start; }
@@ -201,8 +217,11 @@ button { font: inherit; }
   .hero-copy { max-width: 760px; }
   .hero-panel { width: min(100%, 560px); margin-left: auto; }
   .facts-grid { grid-template-columns: repeat(2, 1fr); }
-  .purpose-grid, .schedule-grid, .impact-grid, .location-grid { grid-template-columns: 1fr; gap: 62px; }
+  .purpose-grid, .shirt-grid, .schedule-grid, .impact-grid, .location-grid { grid-template-columns: 1fr; gap: 62px; }
   .purpose-copy { max-width: 760px; }
+  .event-shirt::before { top: 48%; width: 100%; }
+  .shirt-copy { max-width: 760px; }
+  .shirt-visual { width: min(100%, 820px); margin-inline: auto; }
   .schedule-intro { position: static; }
   .impact-stat { border-right: 0; border-bottom: 1px solid rgba(255, 255, 255, 0.3); padding: 0 0 50px; text-align: left; }
   .impact-stat strong { font-size: 10rem; }
@@ -223,12 +242,16 @@ button { font: inherit; }
   .date-lockup strong { font-size: 8rem; }
   .facts-grid { width: 100%; grid-template-columns: 1fr 1fr; }
   .facts article, .facts a { min-height: 138px; padding: 20px 15px; }
-  .purpose h2, .section-heading h2, .schedule h2, .impact h2, .location h2, .final-cta h2 { font-size: clamp(3rem, 15vw, 4.5rem); overflow-wrap: break-word; }
+  .purpose h2, .section-heading h2, .shirt-copy h2, .schedule h2, .impact h2, .location h2, .final-cta h2 { font-size: clamp(3rem, 15vw, 4.5rem); overflow-wrap: break-word; }
   .purpose-copy { padding-left: 0; border-left: 0; }
   .impact-callout { grid-template-columns: 1fr; }
   .route-grid, .practical-grid { grid-template-columns: 1fr; }
   .route-card { min-height: 390px; padding: 30px; }
   .route-card > strong { font-size: 8rem; }
+  .event-shirt::before { top: 52%; }
+  .shirt-visual { padding: 58px 14px 24px; }
+  .shirt-visual::before { top: -22px; right: -14px; font-size: 3.7rem; }
+  .shirt-badge { top: 20px; left: 20px; }
   .timeline li { grid-template-columns: 82px 1fr; gap: 16px; padding-inline: 0; }
   .timeline li:hover { padding-inline: 8px; }
   .countdown div { min-width: 78px; }
