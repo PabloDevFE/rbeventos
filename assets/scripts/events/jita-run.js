@@ -34,37 +34,5 @@ if (prefersReducedMotion || !('IntersectionObserver' in window)) {
   revealItems.forEach((item) => observer.observe(item));
 }
 
-const daysElement = document.getElementById('days');
-const hoursElement = document.getElementById('hours');
-const minutesElement = document.getElementById('minutes');
-const countdownNote = document.getElementById('countdown-note');
-const eventDate = new Date('2026-11-22T08:00:00-03:00').getTime();
-
-function updateCountdown() {
-  if (!daysElement || !hoursElement || !minutesElement || !countdownNote) return;
-
-  const difference = eventDate - Date.now();
-
-  if (difference <= 0) {
-    daysElement.textContent = '00';
-    hoursElement.textContent = '00';
-    minutesElement.textContent = '00';
-    countdownNote.textContent = 'O Movimento Jita Run chegou. Bom evento!';
-    return;
-  }
-
-  const totalMinutes = Math.floor(difference / 60000);
-  const days = Math.floor(totalMinutes / 1440);
-  const hours = Math.floor((totalMinutes % 1440) / 60);
-  const minutes = totalMinutes % 60;
-
-  daysElement.textContent = String(days).padStart(2, '0');
-  hoursElement.textContent = String(hours).padStart(2, '0');
-  minutesElement.textContent = String(minutes).padStart(2, '0');
-}
-
-updateCountdown();
-setInterval(updateCountdown, 60000);
-
 const currentYear = document.getElementById('current-year');
 if (currentYear) currentYear.textContent = String(new Date().getFullYear());

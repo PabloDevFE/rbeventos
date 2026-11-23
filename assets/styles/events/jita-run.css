@@ -55,7 +55,7 @@ button { font: inherit; }
 .eyebrow::before { content: ""; width: 34px; height: 2px; background: currentColor; }
 .eyebrow-dark { color: var(--orange-dark); }
 .hero-logo { width: min(100%, 590px); margin: 28px 0 42px; }
-.hero h1 { max-width: 720px; font-family: var(--display); font-size: clamp(3.8rem, 7vw, 6.6rem); font-style: italic; font-weight: 900; letter-spacing: -0.045em; line-height: 0.78; text-transform: uppercase; }
+.hero h1 { max-width: 720px; font-family: var(--display); font-size: clamp(3.8rem, 7vw, 6.6rem); font-style: italic; font-weight: 900; letter-spacing: -0.045em; line-height: 1.02; text-transform: uppercase; }
 .hero h1 em { color: var(--orange); font-style: inherit; }
 .hero-copy > p { max-width: 650px; margin-top: 28px; color: rgba(255, 255, 255, 0.68); font-size: 1rem; }
 .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 34px; }
@@ -281,3 +281,36 @@ button { font: inherit; }
   .countdown div { min-width: 0; flex: 1; padding-inline: 6px; }
   .location-art > strong { font-size: 4.6rem; }
 }
+
+/* Memórias da edição 2026 */
+.hero-memory { position: relative; width: 100%; max-width: 430px; justify-self: end; transform: rotate(2deg); border: 8px solid var(--white); background: var(--white); box-shadow: 0 28px 70px rgba(0, 0, 0, .35); }
+.hero-memory img { width: 100%; height: auto; aspect-ratio: 3 / 4; object-fit: cover; }
+.hero-memory figcaption { padding: 16px 8px 8px; color: var(--ink); text-align: center; font-size: .875rem; font-weight: 800; }
+.impact-callout { display: block; }
+.memories { background: var(--black); color: var(--white); }
+.memories .section-heading { max-width: 800px; margin-bottom: 44px; }
+.memories .section-heading p { margin-top: 24px; color: rgba(255,255,255,.78); font-size: 1rem; }
+.memories-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 18px; }
+.memory-photo { position: relative; display: block; overflow: hidden; background: var(--brown); }
+.memory-photo img { width: 100%; height: auto; aspect-ratio: 3 / 4; object-fit: cover; transition: transform .3s; }
+.memory-photo span { position: absolute; right: 10px; bottom: 10px; padding: 6px 10px; background: rgba(9,8,6,.85); color: white; font-size: .875rem; }
+.memory-photo:hover img { transform: scale(1.035); }
+.memory-photo:focus-visible { outline: 3px solid var(--orange); outline-offset: 4px; }
+.memories-note { margin-top: 28px; font-size: 1rem; color: rgba(255,255,255,.8); }
+.memories-note a { color: var(--white); text-underline-offset: 4px; }
+@media (max-width: 980px) {
+  .hero-memory { justify-self: center; max-width: 480px; }
+  .memories-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+@media (max-width: 720px) {
+  .hero-memory { transform: none; }
+  .memories-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+}
+@media (max-width: 430px) {
+  .memories-grid { grid-template-columns: 1fr; gap: 20px; }
+}
+
+.memory-video { margin: 48px auto 0; width: min(100%, 780px); }
+.memory-video video { display: block; width: 100%; max-height: 75vh; background: #000; border: 1px solid rgba(255,255,255,.18); }
+.memory-video figcaption { margin-top: 14px; color: rgba(255,255,255,.8); font-size: 1rem; text-align: center; }
+.memory-video video:focus-visible { outline: 3px solid var(--orange); outline-offset: 4px; }
